@@ -3,8 +3,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-     PUSHERO MARKET APP
+    <div className="text-blue-600">
+           
     </div>
   );
 }
