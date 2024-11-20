@@ -28,7 +28,15 @@ const Login = () => {
         })
     }
 
-   
+    // Advertencia para que al momento de no colocar @ o completar correo se deuelve el aviso
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
+
+    // Parte de la comprovacion de login los datos
+    console.log("data login", data)
+
+
 
     return (
         <section id="login">
@@ -40,7 +48,7 @@ const Login = () => {
                         <img src={imagenLogin} width="280" height="280" alt='login icono' />
                     </div>
 
-                    <form className='pt-6'>
+                    <form className='pt-6' onSubmit={handleSubmit}>
                         <div className='grid'>
                             <label>Correo :</label>
                             <div className='bg-slate-100 p-2'>
