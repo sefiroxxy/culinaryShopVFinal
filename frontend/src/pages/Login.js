@@ -36,8 +36,6 @@ const Login = () => {
     // Parte de la comprovacion de login los datos
     console.log("data login", data)
 
-
-
     return (
         <section id="login">
 
@@ -45,10 +43,10 @@ const Login = () => {
 
                 <div className='bg-white p-5 w-full max-w-sm mx-auto'>
                     <div className='w-20 h-20 mx-auto'>
-                        <img src={imagenLogin} width="280" height="280" alt='login icono' />
+                        <img src={imagenLogin} alt='login icono' />
                     </div>
 
-                    <form className='pt-6' onSubmit={handleSubmit}>
+                    <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                         <div className='grid'>
                             <label>Correo :</label>
                             <div className='bg-slate-100 p-2'>
