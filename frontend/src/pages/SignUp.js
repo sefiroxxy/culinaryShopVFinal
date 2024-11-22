@@ -8,6 +8,9 @@ import { FaEye } from "react-icons/fa";
 //icono de react ojo-slash (no mostrar)
 import { FaEyeSlash } from "react-icons/fa";
 
+//icono de react x 
+import { HiOutlineXMark } from "react-icons/hi2";
+
 //
 import { Await, Link } from 'react-router-dom';
 import imageTobase64 from '../helpers/imageToBase64';
@@ -21,7 +24,7 @@ const SignUp = () => {
     password: "",
     name: "",
     confirmPassword: "",
-    porfilePicture: "",
+    profilePic: "",
 
   })
 
@@ -44,7 +47,7 @@ const SignUp = () => {
     setData((preve)=>{
       return{
         ...preve,
-        porfilePicture: imagePic
+        profilePic : imagePic
       }
     })
   }
@@ -66,7 +69,7 @@ const SignUp = () => {
 
           <div className='w-20 h-20 mx-auto relative overflow-hidden rounded-full'>
             <div>
-              <img src={data.porfilePicture || imagenLogin} alt='login icono' />
+              <img src={data.profilePic || imagenLogin} alt='login icono' />
             </div>
 
             <form>
@@ -74,7 +77,7 @@ const SignUp = () => {
                 <div className='text-xs bg-opacity-80 bg-slate-200 pb-4 pt-2 cursor-pointer text-center absolute bottom-0 w-full'>
                   Cargar Imgen
                 </div>
-                <input type='file' className='hidden' onChange={handleUploadPic}/>
+                <input type='file' className='hidden' onChange={handleUploadPic}/>  
               </label>
             </form>
           </div>
