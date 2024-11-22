@@ -39,15 +39,15 @@ const SignUp = () => {
     })
   }
 
-  const handleUploadPic = async(e) => {
+  const handleUploadPic = async (e) => {
     const file = e.target.files[0]
 
     const imagePic = await imageTobase64(file)
 
-    setData((preve)=>{
-      return{
+    setData((preve) => {
+      return {
         ...preve,
-        profilePic : imagePic
+        profilePic: imagePic
       }
     })
   }
@@ -72,12 +72,13 @@ const SignUp = () => {
               <img src={data.profilePic || imagenLogin} alt='login icono' />
             </div>
 
+            {/* Se genera el formulario de registro */}
             <form>
               <label>
                 <div className='text-xs bg-opacity-80 bg-slate-200 pb-4 pt-2 cursor-pointer text-center absolute bottom-0 w-full'>
                   Cargar Imgen
                 </div>
-                <input type='file' className='hidden' onChange={handleUploadPic}/>  
+                <input type='file' className='hidden' onChange={handleUploadPic} />
               </label>
             </form>
           </div>
@@ -93,7 +94,9 @@ const SignUp = () => {
                   name='name'
                   value={data.name}
                   onChange={handleOnChange}
+                  required
                   className='w-full h-full outline-none bg-transparent' />
+
               </div>
             </div>
 
@@ -106,7 +109,9 @@ const SignUp = () => {
                   name='email'
                   value={data.email}
                   onChange={handleOnChange}
+                  required
                   className='w-full h-full outline-none bg-transparent' />
+
               </div>
             </div>
 
@@ -119,7 +124,9 @@ const SignUp = () => {
                   value={data.password}
                   name='password'
                   onChange={handleOnChange}
+                  required
                   className='w-full h-full outline-none bg-transparent' />
+
                 <div className='cursor-pointer text-xl' onClick={() => setShowPassword((preve) => !preve)}>
                   <span>
                     {
